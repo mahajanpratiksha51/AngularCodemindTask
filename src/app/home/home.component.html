@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <span class="text-white">SBook</span>
+    <button class="btn btn-light"routerLink="/signin" (click)="logout()">Logout</button>
+  </nav>
+  <div class="container pt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-6  border">
+            <h3>Comments</h3>
+            <h6 *ngFor="let item of data">{{ item.name }}</h6>
+            <div class="row">
+                <div class="col-9">
+                    <input class="form-control" type="text" id="postField" [(ngModel)]="newData.name" placeholder="Add a comment" />
+                </div>
+                <div class="col-3">
+                    <button class="form-control" (click)="submitData()">Comment</button>
+                </div>
+            </div>
+        </div>
+
+       
+      
+    </div>
+    
+
+</div>
+<!--<div *ngFor="let item of items">
+        <h3>{{ item.name }}</h3>
+        <p>Like Count: {{ item.likeCount }}</p>
+        <p>Unlike Count: {{ item.unlikeCount }}</p>
+        <button (click)="likeItem(item.id)">Like</button>
+        <button (click)="unlikeItem(item.id)">Unlike</button>
+      </div>-->
+  
+  
+
